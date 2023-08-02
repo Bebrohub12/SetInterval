@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="main">
+        <button>start</button>
+
+    </div>
+
+    <script>
+        let div = document.getElementById("main");
+        let btn = document.querySelector("button")
+
+        let x = 11;
+        function skm() {
+
+            x = x - 1
+            let p = document.createElement("p");
+            p.innerHTML = x;
+            div.appendChild(p)
+
+            if (x == 0) {
+                clearInterval(z);
+            }
+        }
+
+        
+        let z;
+        btn.onclick = () => {
+
+            z = setInterval(skm, 1000);
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>
